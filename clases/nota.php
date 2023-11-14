@@ -12,6 +12,17 @@ class Nota {
         $this->uc_id = $uc_id;
         $this->nota = $nota;
     }
+
+    public function getNotasbyAlumno($alumno_id) {
+        if($alumno_id == $this->alumno_id){
+            return $this->nota;
+        }
+        else {
+            return "No se encontro la nota en ese alumno";
+        }
+    }
+
+    
 }
 
 ?>

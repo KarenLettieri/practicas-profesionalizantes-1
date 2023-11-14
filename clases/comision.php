@@ -14,6 +14,10 @@ class Comision {
         $this->cupoMaximo = $cupoMaximo;
         $this->profesor_id = $profesor_id;
     }
+
+    public function createComision(){
+        return "Se creo la comision";
+    }
 }
 
 ?>

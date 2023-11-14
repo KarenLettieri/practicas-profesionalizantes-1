@@ -21,19 +21,58 @@ protected function create(){
 }
 
 protected function delete() {
-    $this->query = "DELETE FROM correlatividades WHERE correlatividad_id = '$this->correlatividad_id'";
+   $this->query="DELETE FROM unidadescurriculares WHERE uc_id = '$this->uc_id'";
     $this->execute_single_query();
 }
 
 protected function update() {
-    $this->query = "UPDATE correlatividades SET uc_id = '$this->uc_id', correlativa = '$this->correlativa' WHERE correlatividad_id = '$this->correlatividad_id'";
-    $this->execute_single_query();
+    $this->query="UPDATE unidadescurriculares SET nombre = '$this->nombre', carrera_id = '$this->carrera_id', correlativa = '$this->correlativa', formato = '$this->formato' WHERE uc_id = '$this->uc_id'";
 }
 
-public function getCorrelatividades() {
-    $this->query = "SELECT '$this->correlativa' FROM correlatividades WHERE uc_id = '$this->uc_id'";
-    $this->get_results_from_query();
-    return $this->rows;
+public function getCondicion($nota, $asistencia) {
+    switch($this->formato){
+        case "taller":
+            if($nota >= 6 && $asistencia >= 75){
+                return "Promocion directa";
+            }
+            elseif($nota < 6 && $asistencia < 75){
+                return "Alumno regular, debe rendir examen final";
+            }
+            else{
+                return "Recursa";
+            }
+        case "materia":
+            if($nota >= 8 && $asistencia >= 75){
+                return "Promocion directa";
+            }
+            elseif(($nota >= 6 && $nota < 8) && $asistencia < 75){
+                return "Alumno regular, debe rendir examen final";
+            }
+            else{
+                return "Alumno libre.";
+            }
+            
+           
+        case "proyecto":
+            if($nota >= 6 && $asistencia >= 75){
+                return "Promocion directa";
+            }
+            else{
+                return "Debe rendir examen final";
+            }
+            
+        case "practicaprofesionalizante":
+            if($nota >= 7 && $asistencia >= 75){
+                return "Alumno en condiciones de rendir final";
+            }
+            else{
+                return "Recursa";
+            }
+        default:
+            return "No se encontro el formato";
+        }
+
+
 }
 }
 
