@@ -1,13 +1,16 @@
 <?php
 class Alumno {
-  public $nombre;
-  public $apellido;
-  public $legajo;
+    private $alumno_id;
+    private $nombre;
+    private $apellido;
+    private $dni;
+    private $f_nacimiento;
+    private $carrera_id;
 
-  public function __construct($nombre, $apellido, $legajo) {
+  public function __construct($nombre, $apellido, $dni) {
     $this->nombre = $nombre;
     $this->apellido = $apellido;
-    $this->legajo = $legajo;
+    $this->dni = $dni;
   }
 
   public function obtenerNombreCompleto() {
