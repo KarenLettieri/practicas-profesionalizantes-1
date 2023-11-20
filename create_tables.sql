@@ -80,3 +80,7 @@ CREATE TABLE profesores (
     nombre_profesor VARCHAR(100),
     apellido_profesor VARCHAR(100)
 );
+
+ALTER TABLE alumnos
+ADD COLUMN comision_id INT,
+ADD FOREIGN KEY (comision_id) REFERENCES comisiones(id_comision);
