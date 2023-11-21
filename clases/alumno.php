@@ -14,6 +14,8 @@ class Alumno
     private $f_nacimiento;
     private $carrera_id;
 
+   
+
      public function __construct() {
       $this->conn = new mysqli($this->host, $this->user, $this->password, $this->database);
 
@@ -23,6 +25,7 @@ class Alumno
   }
 
     public function getListaAlumnos() {
+      
     $query = "SELECT * FROM alumnos";
     $result = $this->conn->query($query);
 

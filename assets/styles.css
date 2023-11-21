@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  h3,h5{
+  font-size: 20px;
+  }
+  
+  h2,h4{
+    font-weight: bold;
+    font-size: 30px;
+  }
+  h4{
+    font-size: 28px;
+  }
+  #formulario {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  table {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 70%; /* Puedes ajustar el ancho según tus preferencias */
+      
+  }
+  #establecimiento{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    width: 70%;
+    border-bottom: 0.3rem solid;
+    font-weight: bold;
+  
+  }
+  #establecimiento-1{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    width: 70%;
+    border-bottom: 0.5rem solid grey;
+    font-weight: bold;
+  
+  }
+  #establecimiento-2{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    width: 70%;
+    font-weight: bold;
+  
+  }
+
+  img{
+    padding-bottom: 1rem;
+  }
+  .parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+  .parent-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+
+
+  .div1 { grid-area: 1 / 1 / 2 / 4; } 
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
